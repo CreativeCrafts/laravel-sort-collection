@@ -4,7 +4,6 @@ namespace CreativeCrafts\SortCollection;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use CreativeCrafts\SortCollection\Commands\SortCollectionCommand;
 
 class SortCollectionServiceProvider extends PackageServiceProvider
 {

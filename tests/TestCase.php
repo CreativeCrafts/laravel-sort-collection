@@ -2,9 +2,9 @@
 
 namespace CreativeCrafts\SortCollection\Tests;
 
+use CreativeCrafts\SortCollection\SortCollectionServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use CreativeCrafts\SortCollection\SortCollectionServiceProvider;
 
 class TestCase extends Orchestra
 {
