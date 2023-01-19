@@ -6,8 +6,10 @@ use Illuminate\Support\Collection;
 
 class SortCollection
 {
-    public static function execute(Collection $collection, string $sortKey, string $sortDirection): Collection
+    public static function execute(Collection $collection, string $sortKey, ?string $sortDirection): Collection
     {
+        $sortDirection = $sortDirection ?? self::defaultSortDirection();
+
         if ($sortDirection === 'asc') {
             return $collection->sortBy($sortKey);
         }

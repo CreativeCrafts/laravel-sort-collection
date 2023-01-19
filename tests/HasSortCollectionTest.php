@@ -32,14 +32,14 @@
       ]);
   });
 
-  it('can sort a collection in descending order by default', function () {
+  it('can sort a collection by using the default sort direction set in the config', function () {
       $collection = collect([
           ['name' => 'John', 'age' => 30],
           ['name' => 'Jane', 'age' => 25],
           ['name' => 'Jack', 'age' => 40],
       ]);
 
-      $sortedCollection = SortCollection::execute($collection, 'age', SortCollection::defaultSortDirection());
+      $sortedCollection = SortCollection::execute($collection, 'age', null);
 
       expect($sortedCollection->first())->toBe([
           'name' => 'Jack',

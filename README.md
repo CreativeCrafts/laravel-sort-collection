@@ -45,14 +45,39 @@ $collection = collect([
      ['name' => 'Jane', 'age' => 25],
      ['name' => 'Jack', 'age' => 40],
 ]);
-$sortedCollection = SortCollection::execute($collection, 'age', 'desc');
+$sortKey = 'age'; // string
+$sortDirection = 'desc'; // string
+$sortedCollection = SortCollection::sort($collection, $sortKey, $sortDirection);
+// Sort direction is optional, it will use the default sort direction from the config file if not provided(by default it is desc)
+
+// output:
+[
+          ['name' => 'John', 'age' => 40],
+          ['name' => 'Jane', 'age' => 30],
+          ['name' => 'Jack', 'age' => 25],
+ ]
+
 
 // eloquent example
+// This is useful when you have encrypted fields in your model. Querying the model will decrypt the fields,
+// then you can sort the collection using SortCollection::execute
+// Sort direction is optional, it will use the default sort direction from the config file if not provided(by default it is desc)
+
+
 $query = User::query()
             ->select('name', 'age')
             ->get();
 
-$result = SortCollection::execute($collection, 'age', 'asc');
+$sortKey = 'age'; // string
+$sortDirection = 'asc'; // string
+$sortedCollection = SortCollection::sort($collection, $sortKey, $sortDirection);
+
+//output:
+[
+          ['name' => 'Jack', 'age' => 25],
+          ['name' => 'Jane', 'age' => 30],
+          ['name' => 'John', 'age' => 40],
+ ]
 ```
 
 ```php
