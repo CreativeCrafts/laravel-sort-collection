@@ -5,6 +5,12 @@ on:
     paths:
       - '**.php'
 
+permissions:
+  pull-requests: write
+  contents: write
+  issues: write
+  repository-projects: write
+
 jobs:
   php-code-styling:
     runs-on: ubuntu-latest

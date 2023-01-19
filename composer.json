@@ -1,22 +1,22 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "creativecrafts/laravel-sort-collection",
+    "description": "A simple package to sort query collections.",
     "keywords": [
-        ":vendor_name",
+        "creativeCrafts",
         "laravel",
-        ":package_slug"
+        "laravel-sort-collection"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/creativecrafts/laravel-sort-collection",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Godspower Oduose",
+            "email": "oduose4eva@gmail.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^8.1",
+        "php": "^8.1|^8.2",
         "spatie/laravel-package-tools": "^1.14.0",
         "illuminate/contracts": "^9.0"
     },
@@ -35,13 +35,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "CreativeCrafts\\SortCollection\\": "src",
+            "CreativeCrafts\\SortCollection\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "CreativeCrafts\\SortCollection\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -61,10 +61,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "CreativeCrafts\\SortCollection\\SortCollectionServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "SortCollection": "CreativeCrafts\\SortCollection\\Facades\\SortCollection"
             }
         }
     },
