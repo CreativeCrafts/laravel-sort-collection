@@ -60,7 +60,7 @@ $sortedCollection = Sort::collection($collection, $sortKey, $sortDirection);
 
 // eloquent example
 // This is useful when you have encrypted fields in your model. Querying the model will decrypt the fields,
-// then you can sort the collection using SortCollection::execute
+// then you can sort the collection using Sort::collection() method.
 // Sort direction is optional, it will use the default sort direction from the config file if not provided(by default it is desc)
 
 
