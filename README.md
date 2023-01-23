@@ -38,7 +38,7 @@ Optionally, you can publish the views using
 ## Usage
 
 ```php
-use CreativeCrafts\SortCollection\SortCollection;
+use CreativeCrafts\SortCollection\Sort;
 // simple collection example
 $collection = collect([
      ['name' => 'John', 'age' => 30],
@@ -47,7 +47,7 @@ $collection = collect([
 ]);
 $sortKey = 'age'; // string
 $sortDirection = 'desc'; // string
-$sortedCollection = SortCollection::sort($collection, $sortKey, $sortDirection);
+$sortedCollection = Sort::collection($collection, $sortKey, $sortDirection);
 // Sort direction is optional, it will use the default sort direction from the config file if not provided(by default it is desc)
 
 // output:
@@ -70,7 +70,7 @@ $query = User::query()
 
 $sortKey = 'age'; // string
 $sortDirection = 'asc'; // string
-$sortedCollection = SortCollection::sort($collection, $sortKey, $sortDirection);
+$sortedCollection = Sort::collection($collection, $sortKey, $sortDirection);
 
 //output:
 [
@@ -82,9 +82,9 @@ $sortedCollection = SortCollection::sort($collection, $sortKey, $sortDirection);
 
 ```php
 You can also retrieve the default sort direction from the config file.
-use CreativeCrafts\SortCollection\SortCollection;
+use CreativeCrafts\SortCollection\Sort;
 
-SortCollection::defaultSortDirection()
+Sort::getDefaultSortDirection()
 ```
 
 

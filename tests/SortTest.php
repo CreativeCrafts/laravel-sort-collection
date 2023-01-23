@@ -1,6 +1,6 @@
 <?php
 
-  use CreativeCrafts\SortCollection\SortCollection;
+  use CreativeCrafts\SortCollection\Sort;
 
   it('can sort a collection in ascending order', function () {
       $collection = collect([
@@ -9,7 +9,7 @@
           ['name' => 'Jack', 'age' => 40],
       ]);
 
-      $sortedCollection = SortCollection::execute($collection, 'age', 'asc');
+      $sortedCollection = Sort::collection($collection, 'age', 'asc');
 
       expect($sortedCollection->first())->toBe([
           'name' => 'Jane',
@@ -24,7 +24,7 @@
           ['name' => 'Jack', 'age' => 40],
       ]);
 
-      $sortedCollection = SortCollection::execute($collection, 'age', 'desc');
+      $sortedCollection = Sort::collection($collection, 'age', 'desc');
 
       expect($sortedCollection->first())->toBe([
           'name' => 'Jack',
@@ -39,7 +39,7 @@
           ['name' => 'Jack', 'age' => 40],
       ]);
 
-      $sortedCollection = SortCollection::execute($collection, 'age', null);
+      $sortedCollection = Sort::collection($collection, 'age', null);
 
       expect($sortedCollection->first())->toBe([
           'name' => 'Jack',
@@ -48,5 +48,5 @@
   });
 
   it('can get the default sort direction', function () {
-      expect(SortCollection::defaultSortDirection())->toBe('desc');
+      expect(Sort::getDefaultSortDirection())->toBe('desc');
   });
