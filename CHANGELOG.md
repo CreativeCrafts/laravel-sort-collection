@@ -18,3 +18,7 @@ All notable changes to `laravel-sort-collection` will be documented in this file
 - Rename `Sort` class method `execute` to `collection` and `defaultSortDirection` to `getDefaultSortDirection`.
 - Updated Readme.md to reflect the changes.
 - Updated pest tests to reflect the changes.
+
+## 1.1.2 - 2023-02-16
+
+- Support laravel 10.
