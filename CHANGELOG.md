@@ -21,4 +21,8 @@ All notable changes to `laravel-sort-collection` will be documented in this file
 
 ## 1.1.2 - 2023-02-16
 
-- Support laravel 10.
+- Updated dependencies.
+
+## 1.1.3 - 2023-02-21
+
+- Support laravel 10
