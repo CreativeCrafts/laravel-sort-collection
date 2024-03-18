@@ -26,3 +26,9 @@ All notable changes to `laravel-sort-collection` will be documented in this file
 ## 1.1.3 - 2023-02-21
 
 - Support laravel 10
+
+## 1.2.0 - 2024-03-18
+
+- Added support for Laravel 11
+- Removed support for Laravel 9
+- php8.2 is the minimum required php version
