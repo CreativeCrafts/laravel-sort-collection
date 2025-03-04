@@ -32,3 +32,11 @@ All notable changes to `laravel-sort-collection` will be documented in this file
 - Added support for Laravel 11
 - Removed support for Laravel 9
 - php8.2 is the minimum required php version
+
+## 1.2.1 - 2025-03-03
+
+- Added support for Laravel 12
+- Added new method `encryptedColumn` and `multipleColumns` to sort by multiple columns.
+- Updated README.md to show how to use the new methods with examples.
+- Document all methods
+- Added Sort interface
