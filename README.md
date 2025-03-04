@@ -86,7 +86,30 @@ use CreativeCrafts\SortCollection\Sort;
 
 Sort::getDefaultSortDirection()
 ```
+## Newly added methods
 
+### For a single encrypted column:
+```php
+use CreativeCrafts\SortCollection\Sort;
+
+// In your controller or service
+$users = Sort::encryptedColumn(User::query(), 'encrypted_email', 'asc');
+```
+
+### For multiple columns (some might be encrypted):
+```php
+use CreativeCrafts\SortCollection\Sort;
+
+// Get all users first
+$users = User::all();
+
+// Sort by multiple columns (last sort has the highest priority)
+$sortedUsers = Sort::multipleColumns($users, [
+    'name' => 'asc',
+    'encrypted_email' => 'desc',
+    'created_at' => 'desc'
+]);
+```
 
 ## Testing
 
